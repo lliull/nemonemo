@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".myList li").not(":first")
+	.css("background-color","yellow");
+});
+
+</script>
+</head>
+<body>
+	<p class="btn1"><a href="#">이벤트 대상1</a></p>
+	<ul class="myList">
+		<li>리스트1</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+	<p class="btn1"><a href="#">이벤트 대상2</a></p>
+	<ul class="myList">
+		<li>리스트1</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+</body>

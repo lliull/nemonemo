@@ -1,0 +1,24 @@
+div{
+	width: 500px;
+	border: 1px solid #DE4778;
+
+}
+
+label{
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	padding-right: 15px;
+}
+form{
+	align: center;
+	padding-left:15%;
+}
+
+h1{
+	text-align: center;
+}
+
+.genderRadio{
+	display: inline
+}

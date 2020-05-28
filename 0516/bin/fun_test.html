@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수함수함수함수함수함수함수함수</title>
+<script type="text/javascript">
+
+//함수 저장하기
+
+function greeting(name, area){  //(매개변수)
+	document.write("Hello " + name, "<br>");
+	document.write("Welcome to " + area, "<br>");
+}
+
+greeting("홍길동", "한국"); //실행
+greeting("홍대리", "미국"); //한번더 실행
+
+
+//리턴문
+
+function myFnc(num1, num2){
+	document.write("num1 + num2 = ");
+	return num1 + num2; //값을 반환하고 함수 종료
+	document.write("=== 함수 종료 ===") //리턴문때문에 안나옴
+}
+var result = myFnc(100, 200);
+document.write(result);
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

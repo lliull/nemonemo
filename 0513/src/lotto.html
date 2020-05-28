@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+/* 	var lo = Math.ceil(Math.random()*44); //1~45
+	var mylo = lo;
+	
+	for(var i = 1; i <= 5; i++){
+		lo = Math.ceil(Math.random()*44);
+		if(String(mylo).indexOf(String(lo)) != -1 ){
+			while(String(mylo).indexOf(String(lo)) == -1){
+				mylo += " " + lo;
+			}
+		}else
+		mylo += " " + lo;
+	}
+	 */
+
+	var mylo = new Array(6);
+	
+	for(var i = 0; i < 6; i++){
+		mylo[i] = Math.ceil(Math.random()*44);
+		for(var j = 0; j < i; j++){
+			if(mylo[i] == mylo[j]){
+			i--;
+			break;
+			}
+		}
+	}
+	 
+	
+	
+	 alert(mylo);
+
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문</title>
+<style> .green{ color : green } .red{color : red} .aqua{color : aqua}</style>
+<script type="text/javascript">
+
+	for(var i = 1 ; i <= 100 ; i++){
+		if(i % 5 == 0 && i % 7 != 0){
+			document.write("<p class='red'>"+i+"</p>");
+		}else if(i % 7 == 0 && i % 5 != 0){
+			document.write("<p class='green'>"+i+"</p>");
+		}else if(i % 7 == 0 && i % 5 == 0){
+			document.write("<p class='aqua'>"+i+"</p>");
+		}
+	}
+
+	
+	for(var i = 1; i <= 10; i++){
+		if(i == 6) break;
+		document.write(i, "<br>");
+	}
+	document. write("====The End====", "<br>", "<br>");
+	
+	
+	
+	for(var i = 1; i <= 10; i++){
+		if(i % 2 == 0) continue;
+		document.write(i, "<br>");
+	}
+	document.write("====The End====");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
