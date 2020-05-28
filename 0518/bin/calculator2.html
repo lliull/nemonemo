@@ -1,0 +1,371 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+var btnEnterFlag = "N";
+$(function(){
+	var btnEnterFirst = "";
+	var btnEnterSecond = "";
+	var btnOpr = "";
+	
+	// gkgkgkgkgk
+	$(".btnNum").click(function(){
+		var ts = $(this).text();
+		console.log(btnEnterSecond);
+		
+		var btnEnter = $("#btnEnter");
+		if(btnEnter.text().length < 15){
+			btnEnter.append(ts);
+		}//15자 이상 못쓰게
+		
+		//console.log(btnEnter.text().length); 
+	})
+
+	
+	//한글자씩 지우기
+	$("#backSpace").click(function(){
+		var i = $("#btnEnter").text().length;
+		var number = $("#btnEnter").text();
+		var backSpace = number.slice(0, i-1);
+		$("#btnEnter").text(backSpace);
+	}) 
+	
+	//전체지우기
+	$("#btnAc").click(function(){
+		$("#btnEnter").empty();
+	})
+	
+ 	//연산자
+ 	
+
+	
+	
+	$(".btnOpr").click(function(){
+
+		if($(this).text() == "÷"){
+			//$(".btnOpr").text() = "/";
+			btnOpr = '/';
+		}else{
+			btnOpr = $(this).text();
+		}
+		
+		
+		if(btnEnterFlag == "N"){
+			//btnOpr = $(this).text();
+			btnEnterFirst = $("#btnEnter").text();
+			$("#btnEnter").empty();
+			btnEnterFlag = "Y";
+		}else{
+			btnEnterSecond = $("#btnEnter").text();
+			
+			switch(btnOpr){
+			case "+" : result = Number(btnEnterFirst) + Number(btnEnterSecond);
+				break;
+			case "-" : result = Number(btnEnterFirst) - Number(btnEnterSecond);
+				break;
+			case "*" : result = Number(btnEnterFirst) * Number(btnEnterSecond);
+				break;
+			case "/" : result = Number(btnEnterFirst) / Number(btnEnterSecond);
+				break;
+			case "=" : result; btnEnterFlag = "N";  //답나오게 
+				break;
+			}
+			$("#btnEnter").empty();
+			btnOpr = "";
+			btnEnterSecond = "";
+			
+			btnEnter.append(result);
+			btnEnterFirst = result;
+		}
+
+	}) 
+	
+
+
+		
+
+ 
+
+
+	
+
+	
+	
+	//.두번 못쓰게
+ 	$("#btnDot").click(function(){
+		if(String(btnEnter).indexOf($("#btnDot")) == -1){
+		btnEnter.append($("#btnDot"));
+		}
+		
+		})
+		
+
+
+	}) 
+
+	
+	
+
+
+
+</script>
+<style>
+
+.btn{
+   background-color: #DDDDDD;
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 21px;
+}
+
+
+
+
+.enter{
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   text-align: right;
+   font-size: 25px;
+   padding: 0px 30px 0px 10px;
+}
+
+</style>
+</head>
+<body>
+ <table align="center">
+            <tr>
+                <td class="enter" colspan="4" style="background-color: #FFFFFF" id="btnEnter"></td>
+             
+            
+
+            </tr>
+            <tr>
+                <td class="btn" colspan="2" style="background-color: #FFCC00" id="btnAc">AC</td>
+                <td class="btn" id="backSpace">←</td>
+                <td class="btn btnOpr">÷</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">7</td>
+                <td class="btn btnNum">8</td>
+                <td class="btn btnNum">9</td>
+                <td class="btn btnOpr">*</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">4</td>
+                <td class="btn btnNum">5</td>
+                <td class="btn btnNum">6</td>
+                <td class="btn btnOpr">-</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">1</td>
+                <td class="btn btnNum">2</td>
+                <td class="btn btnNum">3</td>
+                <td class="btn btnOpr">+</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum" colspan="2">0</td>
+                <td class="btn btnNum" id="btnDot">.</td>
+                <td class="btn btnOpr" style="background-color: #191919; color: #FFFFFF">=</td>
+            </tr>
+        </table>
+
+
+</body>
+</html> -->
+
+<!-- kyk -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+var btnEnterFlag = "N";
+var btnEnterFirst = "";
+var btnEnterSecond = "";
+var btnOpr = "";
+var result = "";
+$(function(){
+	
+
+	//한글자씩 지우기
+	$("#backSpace").click(function(){
+		var i = $("#btnEnter").text().length;
+		var number = $("#btnEnter").text();
+		var backSpace = number.slice(0, i-1);
+		$("#btnEnter").text(backSpace);
+	}) 
+	
+	//전체지우기
+	$("#btnAc").click(function(){
+		$("#btnEnter").empty();
+		btnEnterFirst = "";
+		btnEnterSecond = "";
+		btnOpr = "";
+		result = "";
+	})
+	
+		$(".btnNum").click(function(){
+		var ts = $(this).text();
+		console.log(btnOpr);
+		if(btnOpr != ""){
+			$("#btnEnter").empty();
+			result="";
+			btnOpr = "";
+		}
+		
+		var btnEnter = $("#btnEnter");
+		if(btnEnter.text().length < 15){
+			btnEnter.append(ts);
+		}//15자 이상 못쓰게
+		
+		//console.log(btnEnter.text().length); 
+	})
+
+ 	//연산자
+	$(".btnOpr").click(function(){
+
+		if($(this).text() == "÷"){
+			//$(".btnOpr").text() = "/";
+			btnOpr = '/';
+		}else{
+			btnOpr = $(this).text();
+		}
+		
+		
+		if(btnEnterFlag == "N"){
+			//btnOpr = $(this).text();
+			btnEnterFirst = $("#btnEnter").text();
+			$("#btnEnter").empty();
+			btnEnterFlag = "Y";
+		}else if(btnEnterFirst == result){
+			$("#btnEnter").empty();
+			//result="";
+		}else{
+			btnEnterSecond = $("#btnEnter").text();
+			
+			switch(btnOpr){
+			case "+" : result = Number(btnEnterFirst) + Number(btnEnterSecond);
+				break;
+			case "-" : result = Number(btnEnterFirst) - Number(btnEnterSecond);
+				break;
+			case "*" : result = Number(btnEnterFirst) * Number(btnEnterSecond);
+				break;
+			case "/" : result = Number(btnEnterFirst) / Number(btnEnterSecond);
+				break;
+			}
+			$("#btnEnter").empty();
+			
+			btnEnterSecond = "";
+			
+			btnEnter.append(result);
+			btnEnterFirst = result;
+			
+		}
+	}) 
+		
+})
+ 
+	
+	
+	//.두번 못쓰게
+/* 	$(".btnDot").click(function(i){
+		
+		for(i=0; i<1; i++){
+			if(i=0){
+				$("#btnEnter").append(".btnDot");
+			}else{
+				break;
+			}
+		}
+		
+
+
+	}) */
+
+	
+	
+
+
+
+</script>
+<style>
+
+.btn{
+   background-color: #DDDDDD;
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 21px;
+}
+
+
+
+
+.enter{
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   text-align: right;
+   font-size: 25px;
+   padding: 0px 30px 0px 10px;
+}
+
+</style>
+</head>
+<body>
+ <table align="center">
+            <tr>
+                <td class="enter" colspan="4" style="background-color: #FFFFFF" id="btnEnter"></td>
+             
+            
+
+            </tr>
+            <tr>
+                <td class="btn" colspan="2" style="background-color: #FFCC00" id="btnAc">AC</td>
+                <td class="btn" id="backSpace">←</td>
+                <td class="btn btnOpr">÷</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">7</td>
+                <td class="btn btnNum">8</td>
+                <td class="btn btnNum">9</td>
+                <td class="btn btnOpr">*</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">4</td>
+                <td class="btn btnNum">5</td>
+                <td class="btn btnNum">6</td>
+                <td class="btn btnOpr">-</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum">1</td>
+                <td class="btn btnNum">2</td>
+                <td class="btn btnNum">3</td>
+                <td class="btn btnOpr">+</td>
+            </tr>
+            <tr>
+                <td class="btn btnNum" colspan="2">0</td>
+                <td class="btn btnNum btnDot">.</td>
+                <td class="btn btnOpr" style="background-color: #191919; color: #FFFFFF" id="btnAns">=</td>
+            </tr>
+        </table>
+
+
+</body>
+</html>
