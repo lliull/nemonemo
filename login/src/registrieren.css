@@ -1,6 +1,12 @@
+body{
+	background-color: #F2F2F2;	
+}
+
 div{
 	width: 500px;
-	border: 1px solid #DE4778;
+	border: 3px solid #DE4778;
+	background-color: white;
+	margin:0 auto;
 
 }
 

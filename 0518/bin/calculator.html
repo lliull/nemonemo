@@ -24,6 +24,7 @@
 
 		// 총합
         var total = null;
+		
         
         // 현재 입력값
         var btnEnter = "";
@@ -43,6 +44,8 @@
             console.log(btnEnter);
 
 		})
+		var result = btnEnter;
+        
 
 		//한글자씩 지우기
 
@@ -63,15 +66,20 @@
 		$("#btnAc").click(function() {
 
 			$("#display").empty();
+		btnEnter = "";
 
 		})
 		
 		//.두번 안눌리게
 		$(".btnDot").click(function(){
 			
+			if($("#display").indexOf(".") != -1){
 		
+				$("#display").text(".");
+			}
+			
 		})
-		}
+		
     //
 		//연산자
 
@@ -102,14 +110,58 @@
 			} else { */
 
 				//btnEnterSecond = $("#btnEnter").text();
+				
+
+				
+				btnOprFun(btnOpr)
+				
+			
+					
+			
+			
+				
+				
+				console.log(total);
+
+				$("#btnEnter").empty();
+
+				//btnOpr = "";
+
+			//	btnEnterSecond = "";
+
+				//btnEnter.append(result);
+
+			//	btnEnterFirst = result;
+				
+				$("#display").text(total);
+
 			
 
+		})
+			$("#btnAns").click(function(){
+					btnOprFun(btnOpr);
+					$("#display").text(total);
+					
+					
+					console.log("=누르면");
+					console.log(result);
+				})
+		
+		function btnOprFun(btnOpr){
+				
+				console.log("dd", btnOpr);
+				if(total = "0"){
+					
+					
+				}else{
+				
 				switch (btnOpr) {
 
 				case "+":
 					//result = Number(btnEnterFirst) + Number(btnEnterSecond);
 					total += Number(btnEnter);
 					btnEnter = "";
+					//console.log(total);
 
 					break;
 
@@ -130,31 +182,16 @@
 					btnEnter = "";
 
 					break;
-
+/* 
 				case "=":
-					total == Number(btnEnter);
+					result = total + btnOpr + Number(btnEnter);
 					//btnEnterFlag = "N"; //답나오게
+					//console.log(result);
 
 					break;
-
-				}
-
-				$("#btnEnter").empty();
-
-				btnOpr = "";
-
-			//	btnEnterSecond = "";
-
-				//btnEnter.append(result);
-
-			//	btnEnterFirst = result;
 				
-				$("#display").text(total);
-
-			
-
-		})
-
+  */			}}
+				}
 	})
 
 </script>
@@ -186,6 +223,14 @@
 
 	<table align="center">
 
+		<tr>
+
+			<td class="enter" colspan="4" style="background-color: #E7E9F2; height: 30px"
+				id="display2"></td>
+
+
+
+		</tr>
 		<tr>
 
 			<td class="enter" colspan="4" style="background-color: #FFFFFF"
@@ -248,7 +293,7 @@
 
 			<td class="btn btnNum btnDot">.</td>
 
-			<td class="btn btnOpr"
+			<td class="btn" 
 				style="background-color: #191919; color: #FFFFFF" id="btnAns">=</td>
 
 		</tr>
