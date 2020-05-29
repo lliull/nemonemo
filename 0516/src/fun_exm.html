@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체생성자</title>
+<script type="text/javascript">
+function CheckWeight(name, height, weight){
+	this.userName = name;
+	this.userHeight = height;
+	this.userWeight = weight;
+	this.minWeight;
+	this.maxWeight;
+}
+
+CheckWeight.prototype.getInfo = function(){
+	var str = ""
+	str += "이름: " + this.userName + ", ";
+	str += "키: " + this.userHeight + ", ";
+	str += "몸무게: " + this.userWeight + ", " + "<br>";
+	return str;
+}
+
+CheckWeight.prototype.getResult = function(){
+	this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+	this.maxWeight = (this.userHeight - 100) * 0.9 + 5;	
+	
+	if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+		return "정상몸무게입니다";
+	}else if (this.userWeight < this.minWeight){
+		return "정상몸무게 미달입니다";
+	}else{
+		return "정상몸무게 초과입니다";
+	}
+}
+
+var userName0 = prompt("이름", "");
+var userHeight0 = prompt("키", "");
+var userWeight0 = prompt("몸무게", "");
+
+
+var user = new CheckWeight(userName0, userHeight0, userWeight0);
+document.write(user.getInfo());
+document.write(user.getResult());
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

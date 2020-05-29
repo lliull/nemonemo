@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//숫자연산자
+	var num1 = 15;
+	var num2 = 2;
+	var result;
+	
+	result = num1 + num2;
+	document.write(result, "<br>"); //17
+	
+	result = num1 - num2;
+	document.write(result, "<br>"); //13
+	
+	result = num1 * num2;
+	document.write(result, "<br>"); //30
+	
+	result = num1 / num2;
+	document.write(result, "<br>"); //7.5
+	
+	result = num1 % num2;
+	document.write(result, "<br>"); //1
+	
+	//문자연산자
+	var t1 = "학교종이";
+	var t2 = " 땡땡땡 ";
+	var t3 = 8282;
+	var t4 = " 어서 모이자";
+	var result;
+	
+	result = t1 + t2 + t3 + t4;
+	document.write("<br>", result, "<br>"); //학교종이 땡땡땡 8282 어서 모이자
+	
+	//복합연산자
+	var nnn1 = 10;
+	var nnn2 = 3;
+	
+	nnn1 += nnn2; //nnn1 = nnn1 + nnn2 = 13
+	document.write("<br>", nnn1, "<br>");
+	
+	nnn1 -= nnn2; //nnn1 = nnn1 - nnn2 = 7
+	document.write(nnn1, "<br>");
+	
+	nnn1 *= nnn2; //nnn1 = nnn1 * nnn2 = 30
+	document.write(nnn1, "<br>");
+	
+	nnn1 %= nnn2; //nnn1 = nnn1 % nnn2 = 0
+	document.write(nnn1, "<br>");
+	
+	//증감연산자
+	result = num1 ++; //num1 + 1 = 15 + 1 = 16
+	document.write("<br>", result, "<br>");
+	
+	result = num1 --; //num1 - 1 = 15 - 1 = 14
+	document.write(result, "<br>");
+	
+	//비교연산자
+	var a = 10;
+	var b = 20;
+	var c = 10;
+	var f = "20";
+	var result;
+	
+	result = a > b; //false
+	document.write("<br>", result, "<br>");
+	
+	result = a < b; //true
+	document.write(result, "<br>");
+	
+	result = a <= b; //true
+	document.write(result, "<br>");
+	
+	result = b == f; //true - '=='은 ""를 인식하지 못함!
+	document.write(result, "<br>");
+	
+	result = a != b; //true
+	document.write(result, "<br>");
+	
+	result = b === f; //false
+	document.write(result, "<br>");
+	
+	result = b !== f; //true
+	document.write(result, "<br>");
+	
+	
+	//논리연산자
+	var a = 10;
+	var b = 20;
+	var m = 30;
+	var n = 40;
+	var result;
+	
+	result = a > b || b > m || m > n; // false || false || false = false
+	document.write("<br>" + result + "<br>");
+	
+	result = a < b && a > b && a < m; // true && false && true = false
+	document.write(result, "<br>");
+	
+	result = a > b && b < m || b > n && a < n; // (flase && true) || (flase && true) = flase
+	document.write(result, "<br>");
+	
+	result = !(a>b); // !(flase) = true
+	document.write(result, "<br>");
+	
+	
+	//삼항 조건 연산자
+	var a = 10;
+	var b = 20;
+	var result;
+	
+	result = a > b ? "정답" : "땡";
+	document.write("<br>", result, "<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+//한 버튼에 두개 이벤트 따로올리기
+
+/* $(function(){
+	$(".btn1 a").mouseover(function(){
+		alert("hello");
+	});
+	$(".btn1 a").focus(function(){
+		alert("hello");
+	});
+}); */
+
+//on
+
+/* $(function(){
+	$(".btn1 a").on("mouseover focus", function(){
+		var ts = $(this);
+		ts.css("background-color", "yellow");
+	});
+});
+ */
+ 
+ 
+ //a 눌렀을때 ul 보이기 (부모를 눌렀을때 형제요소 열리게)
+ 
+ $(function(){
+		$(".btn1 a").on("mouseover focus", function(){
+			var ts = $(this);
+			$(".btn1").next("ul").filter(":visible").hide();
+			ts.parents().next().show();
+			return flase;
+		});
+	});
+
+</script>
+<title>제이쿼리 이벤트</title>
+<
+</head>
+<body>
+	<p class="btn1"><a href="#">이벤트 대상1</a></p>
+	<ul style="display:none;">
+		<li>리스트1</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+	<p class="btn1"><a href="#">이벤트 대상2</a></p>
+	<ul style="display:none;">
+		<li>리스트1</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+</body>
+</html>

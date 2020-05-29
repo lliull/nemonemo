@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 마름모</title>
+<script type="text/javascript">
+/*
+
+
+  *
+ * *
+*   *
+ * *
+  *
+
+*/
+
+/* 	for(var i = 1; i <= 3; i++){
+		for(var k = 1; k <= 5; k++){
+			if(i == 1){
+				if(k == 3) document.write("*");
+				else document.write("&nbsp");
+			}else if(i == 2){
+				if(k == 1 && k == 5) document.write("&nbsp");
+				else document.write("&nbsp");
+		}
+	}
+ */
+
+
+
+
+	for(var i = 1; i <= 5; i++){
+		for(var k = 1; k <= 5; k++){
+			if(i == 1 || i == 5){
+				if(k == 3) document.write("*");
+				else document.write("&nbsp");
+			}else if(i == 2 || i == 4){
+				if(k == 2 || k == 4) document.write("*");
+				else document.write("&nbsp");
+			}else if(i == 3){
+				if(k == 1 || k == 5) document.write("*");
+				else document.write("&nbsp");
+			}
+		}document.write("<br>");
+	}
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

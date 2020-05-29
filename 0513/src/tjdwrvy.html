@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var user = {
+		name: prompt("이름", ""),
+		cla: prompt("학번", ""),
+		mah: prompt("수학점수", ""),
+		kor: prompt("국어점수", ""),
+		eng: prompt("영어점수", ""),
+};
+
+var p = ((Number(user.mah) + Number(user.kor) + Number(user.eng)) / 3);
+//alert(p);
+
+var d;
+
+if(p == 100){
+	d = "S";
+}else if(p >= 80){
+	d = "A";
+}else if(p >= 60){
+	d = "B";
+}else if(p >= 40){
+	d = "C";
+}else{
+	d = "D";
+}
+//alert(p);
+
+alert(user.cla + user.name + "님의 평균 점수는" + p + "등급은" + d + "입니다");
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

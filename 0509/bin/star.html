@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/*
+*****
+*****
+*****
+ */
+ 
+ 	for(var i = 1; i <=3; i++){
+ 		for(var k = 1; k < 5; k++){
+ 			document.write("*");
+ 		}
+ 		document.write("*", "<br>");
+ 	}	
+ 
+ 
+ 
+ 
+ /*
+   *
+  ***
+ *****
+ */
+document.write("<br>", "두번째", "<br>", "<br>");
+ 
+	for(var i = 1; i <=3; i++){
+ 		for(var k = 1; k < 5; k++){
+ 			if(i == 1 && k == 1) break;
+ 			else if(i == 2 && k == 3) break;
+ 			document.write("*");
+ 		}
+ 		document.write("*", "<br>");
+ 	}	
+	
+	
+
+document.write("<br>", "트리", "<br>", "<br>");
+
+	for(var i = 1; i <= 3; i++){
+		for(var k = 1; k <= 5; k++){
+			if(i == 1){
+				if(k == 3) document.write("*");
+				else document.write("&nbsp");
+			}else if(i == 2){
+				if(k >= 2 && k <= 4) document.write("*");
+				else document.write("&nbsp");
+			}else document.write("*");
+				
+		}document.write("<br>");
+	}
+ 
+ 
+ /*
+ *****
+  ***
+   *
+ */
+ document.write("<br>", "역트리", "<br>", "<br>");
+ 
+	for(var i = 1; i <= 3; i++){
+		for(var k = 1; k <= 5; k++){
+			if(i == 3){
+				if(k == 3) document.write("*");
+				else document.write("&nbsp");
+			}else if(i == 2){
+				if(k != 1 && k != 5) document.write("*");
+				else document.write("&nbsp");
+			}else document.write("*");
+				
+		}document.write("<br>");
+	}
+ 
+ 
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

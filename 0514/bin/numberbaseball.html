@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자야구 </title>
+<script type="text/javascript">
+var num = new Array(3);
+var mynum = prompt("세자리 숫자", "");
+var st = 0;
+var ba = 0;
+var ou = 0;
+for(var i = 0; i < 3; i++){
+    num[i] = Math.ceil(Math.random()*8);
+    for(var j = 0; j < i; j++){
+       if(num[i] == num[j]){
+          i--;
+          break;
+       }
+    }
+ } //중복안나오게
+ 
+
+var snum = num.join(""); //문자열로 만들기
+
+for(var q = 0; q < snum.length; q++){
+   for(var w = 0; w < mynum.length; w++){
+      if(snum[q] == mynum[w] && q == w){
+            st++;
+      }else if(snum[q] == mynum[w] && q != w){
+         ba++;
+      }else{
+    	  ou++;
+      }
+   }
+}
+
+var msg = "";
+if(ou == 9){
+	msg = "아웃입니다";
+}else if(st == 3){
+	msg = "정답입니다";
+}else{
+	msg = st + "스트라이크 " + ba + "볼";
+}
+
+
+
+/* 
+if(mynum.indexOf(snum) == -1){
+   ba = 0;
+}else if(mynum.indexOf(snum) == 1 || mynum.indexOf(snum) == 2){
+   ba = 1;
+}else{
+   ba = 2;
+}
+ */
+ /* if(snum.charAt(1) == mynum.charAt(1)){ //첫번째자리
+   if(snum.charAt(2) == mynum.charAt(2)){ //두번째자리
+      if(snum.charAt(3) == mynum.charAt(3)){ //세번째자리
+         st = 3;
+      }st = 2;{ //첫번째 두번째
+         else if(snum.charAt(3) == mynum.charAt(3)){ // 첫번째 세번째
+            st = 2;
+         }else{
+            st = 2; //두번째 세번째
+         }
+      }
+   }
+}st = 1;
+else if(snum.charAt(2) == mynum.charAt(2)){
+   st = 1;
+}else if(snum.charAt(3) == mynum.charAt(3)){
+   st = 1;
+}else{
+   st = 0;
+}
+ */
+
+
+
+document.write("컴터값:" + snum + "<br>");
+document.write("입력값:" + mynum + "<br>");
+document.write(msg);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
