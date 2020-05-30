@@ -7,9 +7,9 @@ h1{
     font-size: 100px;
     color: #FFB6B6;
     margin-top: 10px;
-    font-weight: 100;
+    font-weight: 500;
     opacity: 50%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 div{
@@ -29,13 +29,25 @@ form{
 #titleTodoImg{
     border-radius: 15px;
     border: 1px solid #F4B1B1;
-    display: inline-block;
     width: 30px;
     height: 30px;
     float: left;
     margin-left: 20px;
     margin-top: 4px;
+    box-shadow: none;
 }
+
+#checkTodoImg{
+    border-radius: 15px;
+    border: 1px solid gray;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 4px;
+    box-shadow: none;
+}
+
 input{
     display: none;
 }
@@ -46,4 +58,8 @@ input{
     width: 408px;
     border: 1px solid #AEAEAE;
     height: 40px;
+}
+
+p{
+    
 }

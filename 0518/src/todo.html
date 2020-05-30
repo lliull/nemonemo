@@ -6,15 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="todo.css" />
+ 
 </head>
 <body>
     <h1>Todos</h1>
     <div>
-        <form>
-            <label id= "titleTodoImg" for ="titleTodo" ></label>
+        <div>
+            <div id="titleTodoImg" onclick=""></div>
             <input id= "titleTodo" name="todoList" type="checkbox" >
-            <input id="myTodo" type="text" placeholder="What needs to be done?" >
-        </form>
+            <input id="myTodo" type="text" placeholder="What needs to be done?" onkeypress="enterKey()" >
+
+            <div id= "checkList" for ="titleTodo" ></div>
+            <p></p>
+        </div>
+        <div>
+            
+        </div>
     </div>
+    <script src="todo.js"></script>
 </body>
-</html>
+</html> 
