@@ -24,6 +24,13 @@ div{
     box-shadow: 0px 2px 10px 0.3px #AFACAC;
     /* h-shadow v-shadow blur spread color */
 }
+
+#tagCount{
+    color: darkgrey;
+    padding-left: 10px;
+}
+
+
 form{
     padding: 20px 0px;
 }
@@ -62,5 +69,6 @@ input{
 }
 
 p{
+    padding: 10px 10px;
     
 }

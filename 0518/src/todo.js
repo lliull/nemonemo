@@ -1,25 +1,19 @@
 const titleTodo = document.querySelector("#titleTodo");
-const P = document.querySelector(".todoParents");
-//const addForm = document.createElement(".checkList");
 let myTodoText = document.querySelector("#myTodo");
 let myCheckList = document.querySelector("#checkList");
+const myTagCount = document.querySelector("#tagCount")
 
 
 
 function enterKey(){
     if(event.keyCode == 13){
-        myCheckList.innerHTML = myTodoText.value;
         const pTag = document.createElement('p');
-        const pText = document.createTextNode(myTodoText.value)
-        pTag.appendChild(pText)
-        console.log(pTag)
-        // document.getElementById('#checkList').appendChild(pTag);
-        //P.appendChild(<p></p>);
-        console.log(myTodoText.value)
+        const pText = document.createTextNode(myTodoText.value);
+        pTag.innerHTML = "<label id='titleTodoImg'>   </label>" + myTodoText.value;
+        myCheckList.appendChild(pTag);
         myTodoText.value = "";
-    }
+        myCheckList.insertBefore(pTag, myCheckList.firstChild);
+        myTagCount.innerHTML = "todo list count" + myCheckList.childElementCount;
+        }
 }
 
-
-
-//myTodoText.innerHTML = "";
