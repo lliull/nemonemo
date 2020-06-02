@@ -10,12 +10,18 @@
 </head>
 <body>
     <h1>Todos</h1>
-        <div class = "todoParents">
+        <section class = "todoParents">
             <label id="titleTodoImg" onclick=""></label>
             <input id="myTodo" type="text" placeholder="What needs to be done?" onkeypress="enterKey()" >
-            <p id = "checkList" for ="titleTodo"></p>
-            <span id = "tagCount"></span>
-        </div>
+            <div id = "checkList" " ></div>
+            <div id = "btnCon">
+                <a id = "allBtn">all</a>    
+                <a id = "activeBtn">Active</a>
+                <a id = "comBtn">Complete</a>
+                <a id = "resetBtn">Reset</a>
+            </div>
+        </section>
+        <span id = "tagCount" ></span>
     <script src="todo.js"></script>
 </body>
 </html> 
