@@ -15,11 +15,12 @@ function enterKey(){
         }else{
         const pTag = document.createElement('p');
         const pText = document.createTextNode(myTodoText.value);
+        pTag.classList.add('todoPTag');
         pTag.style.display = null;
-        pTag.innerHTML = "<label id='checkTodoImg'>   </label>" + myTodoText.value + "<a id='delBtn' onmouseover='delBtnOver()' onclick='parentElement.remove()'> X </a>"  ;
-        //document.querySelector("#delBtn").style.display = "none";
+        pTag.innerHTML = "<label class='checkTodoImg'></label>" + myTodoText.value + "<a class='delBtn' onclick='parentElement.remove()'> X </a>"  ;
         myCheckList.appendChild(pTag);
         myTodoText.value = "";
+        pTag.addEventListener('click', checkClick)
         myCheckList.insertBefore(pTag, myCheckList.firstChild);
         myTagCount.innerHTML = "todo list count " + myCheckList.childElementCount;
             if(myCheckList.childElementCount > 0){
@@ -29,9 +30,19 @@ function enterKey(){
     }
 }
 
+//const pTagClick = document.querySelectorAll('p');
 
 
-function delBtnOver(){
-     document.querySelector("#delBtn").style.display = 'flex';
- }
 
+function checkClick(p){
+    this.querySelector('.checkTodoImg').style.backgroundColor = "gray";
+    this.style.color = "#f2f2f2";
+    this.style.textDecoration = "line-through";
+    for(let i = 0; i > myCheckList.childElementCount; i++){
+        
+        if(this.style.color == '#f2f2f2'){
+            
+            myTagCount.innerHTML = - i;
+        }
+    }
+}

@@ -38,8 +38,7 @@ p{
     height: 50px;
     padding-left: 20px;
     padding-top: 25px;
-    line-height: 25px;
-    
+    line-height: 25px;   
 }
 
 button{
@@ -66,7 +65,7 @@ button{
     box-shadow: none;
 }
 
-#checkTodoImg{
+.checkTodoImg{
     border-radius: 15px;
     border: 2px solid gray;
     width: 30px;
@@ -97,8 +96,13 @@ button{
     
 }
 
-#delBtn{
+.delBtn{
     float: right;
     margin-right: 30px;
-
+    display: none;
 }
+
+#checkList p:hover a{
+    display: block;
+}
+
