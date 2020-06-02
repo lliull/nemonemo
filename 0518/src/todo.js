@@ -16,7 +16,8 @@ function enterKey(){
         const pTag = document.createElement('p');
         const pText = document.createTextNode(myTodoText.value);
         pTag.style.display = null;
-        pTag.innerHTML = "<label id='checkTodoImg'>   </label>" + myTodoText.value + "<a id='delBtn' onmouseover='delBtnMouseOver()' onclick='delBtnClick()'> X </a>"  ;
+        pTag.innerHTML = "<label id='checkTodoImg'>   </label>" + myTodoText.value + "<a id='delBtn' onmouseover='delBtnOver()' onclick='parentElement.remove()'> X </a>"  ;
+        //document.querySelector("#delBtn").style.display = "none";
         myCheckList.appendChild(pTag);
         myTodoText.value = "";
         myCheckList.insertBefore(pTag, myCheckList.firstChild);
@@ -28,14 +29,9 @@ function enterKey(){
     }
 }
 
-//document.querySelector("#delBtn").style.display = 'none';
-const aTag = document.querySelector("#delBtn");
 
-function delBtnMouseOver(){
+
+function delBtnOver(){
      document.querySelector("#delBtn").style.display = 'flex';
  }
 
- function delBtnClick(){
-     this.parent.remove();
-    console.log(this.parent);
- }
