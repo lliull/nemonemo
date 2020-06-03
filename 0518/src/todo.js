@@ -3,6 +3,7 @@ let myTodoText = document.querySelector("#myTodo");
 let myCheckList = document.querySelector("#checkList");
 const myTagCount = document.querySelector("#tagCount"); 
 document.querySelector("#btnCon").style.display = 'none';
+const myTodoPTagCheck = document.querySelector("#todoPTagCheck")
 
 
 
@@ -34,15 +35,21 @@ function enterKey(){
 
 
 
-function checkClick(p){
+function checkClick(){
     this.querySelector('.checkTodoImg').style.backgroundColor = "gray";
     this.style.color = "#f2f2f2";
     this.style.textDecoration = "line-through";
-    for(let i = 0; i > myCheckList.childElementCount; i++){
-        
-        if(this.style.color == '#f2f2f2'){
-            
-            myTagCount.innerHTML = - i;
-        }
-    }
+    this.classList.replace('todoPTag', 'todoPTagCheck');
+    let todoCheck = document.querySelectorAll("todoPTagCheck");
+    myTagCount.innerHTML = "todo list count " + (myCheckList.childElementCount -- );
 }
+    // for(let i = 0; i > myCheckList.childElementCount; i++) 
+
+
+const allBtnClick = document.getElementById("allBtn");
+function allBtnClickEvent(){
+    document.querySelector('p').classList.replace('todoPTag', 'todoPTagCheck');
+    document.querySelector('.checkTodoImg').style.backgroundColor = "gray";
+}
+allBtnClick.addEventListener('click', 'allBtnClickEvent');
+allBtnClick.addEventListener('click', 'allBtnClickEvent');
