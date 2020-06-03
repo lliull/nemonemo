@@ -46,10 +46,30 @@ function checkClick(){
     // for(let i = 0; i > myCheckList.childElementCount; i++) 
 
 
-const allBtnClick = document.getElementById("allBtn");
-function allBtnClickEvent(){
-    document.querySelector('p').classList.replace('todoPTag', 'todoPTagCheck');
-    document.querySelector('.checkTodoImg').style.backgroundColor = "gray";
+const titleTodoBtn = document.querySelector("#titleTodoImg");
+function titleBtnClick(){
+    let allCheck = document.querySelectorAll('.checkTodoImg');
+    for(let j = 0; j < allCheck.length; j++){
+    allCheck[j].parentElement.style.color = "#f2f2f2"; 
+    allCheck[j].parentElement.style.textDecoration = "line-through";
+    allCheck[j].parentElement.classList.replace('todoPTag', 'todoPTagCheck');
+    }
+    let allCheckBack = document.querySelectorAll('.checkTodoImg');
+    for(let i = 0; i < allCheckBack.length; i++){
+        allCheckBack[i].style.backgroundColor = "gray";
+    }
 }
-allBtnClick.addEventListener('click', 'allBtnClickEvent');
-allBtnClick.addEventListener('click', 'allBtnClickEvent');
+
+
+titleTodoBtn.addEventListener('click', titleBtnClick);
+
+
+const activeBtnClick = document.querySelector("#activeBtn");
+function activeBtnClickEvent(){
+    let checkedList = document.querySelectorAll(".todoPTagCheck");
+    for(let i = 0; i < checkedList.length; i++){
+        checkedList[i].display = "none"; 
+    }
+}
+
+activeBtnClick.addEventListener('click', activeBtnClickEvent);
