@@ -5,9 +5,6 @@ const myTagCount = document.querySelector("#tagCount");
 document.querySelector("#btnCon").style.display = 'none';
 const myTodoPTagCheck = document.querySelector("#todoPTagCheck")
 
-
-
-
 function enterKey(){
     if(event.keyCode == 13){
         if(myTodoText.value.trim() == ""){
@@ -31,10 +28,6 @@ function enterKey(){
     }
 }
 
-//const pTagClick = document.querySelectorAll('p');
-
-
-
 function checkClick(){
     this.querySelector('.checkTodoImg').style.backgroundColor = "gray";
     this.style.color = "#f2f2f2";
@@ -43,8 +36,6 @@ function checkClick(){
     let todoCheck = document.querySelectorAll("todoPTagCheck");
     myTagCount.innerHTML = "todo list count " + (myCheckList.childElementCount -- );
 }
-    // for(let i = 0; i > myCheckList.childElementCount; i++) 
-
 
 const titleTodoBtn = document.querySelector("#titleTodoImg");
 function titleBtnClick(){
@@ -59,17 +50,50 @@ function titleBtnClick(){
         allCheckBack[i].style.backgroundColor = "gray";
     }
 }
-
-
 titleTodoBtn.addEventListener('click', titleBtnClick);
-
 
 const activeBtnClick = document.querySelector("#activeBtn");
 function activeBtnClickEvent(){
     let checkedList = document.querySelectorAll(".todoPTagCheck");
-    for(let i = 0; i < checkedList.length; i++){
-        checkedList[i].display = "none"; 
+    let uncheckedList = document.querySelectorAll(".todoPTag");
+    for(let aci = 0; aci < checkedList.length; aci++){
+        checkedList[aci].style.display = "none"; 
+    }
+    for(let acj = 0; acj < uncheckedList.length; acj++){
+        uncheckedList[acj].style.display = "block";
     }
 }
-
 activeBtnClick.addEventListener('click', activeBtnClickEvent);
+
+const comBtnClick = document.querySelector("#comBtn");
+function comBtnClickEvent(){
+    let checkedList = document.querySelectorAll(".todoPTagCheck");
+    let uncheckedList = document.querySelectorAll(".todoPTag");
+    for(let coi = 0; coi < uncheckedList.length; coi++){
+        uncheckedList[coi].style.display = "none"; 
+    }
+    for(let coj = 0; coj < checkedList.length; coj++){
+        checkedList[coj].style.display = "block";
+    }
+}
+comBtnClick.addEventListener('click', comBtnClickEvent);
+
+const allBtnClick = document.querySelector("#allBtn");
+function allBtnClickEvent(){
+    let checkedList = document.querySelectorAll(".todoPTagCheck");
+    let uncheckedList = document.querySelectorAll(".todoPTag");
+    for(let i = 0; i < checkedList.length; i++){
+        checkedList[i].style.display = "block"; 
+    }
+    for(let i = 0; i < uncheckedList.length; i++){
+        uncheckedList[i].style.display = "block"; 
+    }
+}
+allBtnClick.addEventListener('click', allBtnClickEvent);
+
+const resBtnClick = document.querySelector("#resetBtn");
+function resBtnEvent(){
+    myCheckList.remove();
+}
+
+resBtnClick.addEventListener('click', resBtnEvent);

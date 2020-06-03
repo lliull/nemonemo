@@ -95,7 +95,6 @@ footer{
     margin: 25px 20px 0px 20px;
     border-top: 1px solid gainsboro;
     padding-top: 15px;
-    
 }
 
 .delBtn{
@@ -110,4 +109,11 @@ footer{
 
 #titleTodoImg:hover{
     background-color: lightpink;
+}
+
+.todoPTagCheck{
+    display: block;
+}
+.todoPTag{
+    display: block;  
 }
