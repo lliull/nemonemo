@@ -9,21 +9,31 @@
 </head>
 <body>
 <header>
-    <div>
-        <a></a>
+    <div class="headerLeft">
+        <a href="javascript:history.back();">
+            <img class="backBtn" src="img/back.png">
+        </a>
     </div>
     <h1>
+        <a href="index.html">
     <img src = "img/logo.png" id="logo">
+    </a>
     </h1>
-    <div>
-        <a style="display: none;">로그인</a>
+    <div class="headerRight">
+        <a>
+        </a>
     </div>
 </header>
 <section style="width: 400px; text-align: center; margin-top: 30px;">
-    <input class="loginBox" placeholder="ID">
-    <input class="loginBox" placeholder="password">
-    <img src="img/login.jpg" style="margin-top: 30px; margin-bottom: 70px;">
-    <a>아이디/비밀번호 찾기</a><a href="registration.html">회원가입</a>
+    <form>
+        <input class="loginBox loginBoxId" type="text" placeholder="ID">
+        <input class="loginBox loginBoxPw" type="password" placeholder="password">
+    </form>
+    <img class="loginImg" src="img/login.jpg">
+    <br>
+    <div class="loginBot">
+        <a>아이디</a>/<a>비밀번호 찾기</a>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="registration.html">회원가입</a>
+    </div>
 </section>
 <footer>
     <div>
@@ -33,5 +43,7 @@
         4<br>
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="ddo.js"></script>
 </body>
 </html>

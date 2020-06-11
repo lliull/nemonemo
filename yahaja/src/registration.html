@@ -13,7 +13,9 @@
         <a></a>
     </div>
     <h1>
+    <a href="index.html">
     <img src = "img/logo.png" id="logo">
+    </a>
     </h1>
     <div>
         <a style="display: none;">로그인</a>
@@ -28,6 +30,7 @@
         <div>
             <label class="regLabel" for="userPw">비밀번호</label>
             <input class="regInput" id="userPw" type="password" placeholder="password">
+            <span id="userPwCheck"></span>
         </div>
         <div>
             <label class="regLabel" for="pwCheck">비밀번호 확인</label>
@@ -43,17 +46,17 @@
         </div>
         <div>        
             <label class="regLabel" for="userEmail">이메일</label>
-            <input class="regInput" id="userEmail" type="email"  placeholder="****@******">
+            <input class="regInput" id="userEmail" type="email"  placeholder="ex) @naver.com">
         </div>
         <div>
             <label class="regLabel" for="birthday">생년월일</label>
-            <input class="regInput" id="birthday" type="text" placeholder="YYMMDD">
+            <input class="regInput" id="birthday" type="text" placeholder="YYYYMMDD">
         </div>
         <div class="genderCheck">
             <input type="checkbox" name="gender" id="male" value="male">
-            <label  class="regLabel" for="male">남자</label>
+            <label for="male">남자</label>
             <input type="checkbox" name="gender" id="female" value="female">
-            <label  class="regLabel" for="female">여자</label>
+            <label for="female">여자</label>
         </div>
         <br>
         <div>
@@ -113,5 +116,7 @@
         4<br>
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="ddo.js"></script>
 </body>
 </html>
