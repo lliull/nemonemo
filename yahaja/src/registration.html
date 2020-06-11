@@ -37,6 +37,10 @@
             <label class="regLabel" for="userName">이름</label>
             <input class="regInput" id="userName" placeholder="이름">
         </div>
+        <div>
+            <label class="regLabel" for="userNick">닉네임</label>
+            <input class="regInput" id="userNick" placeholder="닉네임">
+        </div>
         <div>        
             <label class="regLabel" for="userEmail">이메일</label>
             <input class="regInput" id="userEmail" type="email"  placeholder="****@******">
@@ -71,29 +75,30 @@
                 <label for="else">기타</label>
             </div>
         </div>
-        <div style="overflow: scroll; width: 400px; height: 200px;">
-            에펨코리아 개인정보 처리방침
-정보통신망 이용촉진 등에 관한 법률 등 관련 법률에 의한 개인정보 보호규정 및 정보통신부가 제정한 개인정보지침을 준수하고 있습니다.
-
-1. 개인정보의 수집 항목
-원활한 서비스 이용과 고객과의 소통을 위해 수집합니다.
-• 필수항목: 아이디, 비밀번호, 이메일, 닉네임
-• 자동수집항목: IP 주소, 접속 기록, 쿠키 등
-
-2. 개인정보 보유 및 이용기간
-- 가입 회원정보는 탈퇴할 시 3년간 보관 후 파기됩니다.
-- 단, 게시물 및 댓글의 내용은 사이트 폐쇄 시까지 보관합니다.
-- 악성 사용자 재가입을 막기 위해, 단일 암호화 기법으로 해쉬 방식으로 일부 개인정보의 해쉬를 영구적으로 저장하여 가입 제한을 할 수 있다(이 때 개인정보 자체는 정장되지 않음).
-
-3. 개인정보의 수집 이용 목적
-• 아이디, 비밀번호, 이메일, 닉네임 : 회원 가입시에 사용자확인, 중복가입 방지, 부정 이용 방지를 위한 목적으로 사용합니다.
-• 이용자의 IP 주소, 접속 기록 등: 불량회원의 부정 이용방지와 비인가 사용방지, 통계학적 분석에 사용합니다.
-
-• 공고일자: 2015년 10월 3일
-• 시행일자: 2015년 10월 3일
+        <div class="clause" >
+            또왔어 개인정보 처리방침
+            <br>
+            <br>
+            정보통신망 이용촉진 등에 관한 법률 등 관련 법률에 의한 개인정보 보호규정 및 정보통신부가 제정한 개인정보지침을 준수하고 있습니다.
+            <br>
+            1. 개인정보의 수집 항목<br>
+            원활한 서비스 이용과 고객과의 소통을 위해 수집합니다.<br>
+            • 필수항목: 아이디, 비밀번호, 이메일, 닉네임<br>
+            • 자동수집항목: IP 주소, 접속 기록, 쿠키 등<br>
+            <br>
+            2. 개인정보 보유 및 이용기간<br>
+            - 가입 회원정보는 탈퇴할 시 3년간 보관 후 파기됩니다.<br>
+            - 단, 게시물 및 댓글의 내용은 사이트 폐쇄 시까지 보관합니다.<br>
+            - 악성 사용자 재가입을 막기 위해, 단일 암호화 기법으로 해쉬 방식으로 일부 개인정보의 해쉬를 영구적으로 저장하여 가입 제한을 할 수 있다(이 때 개인정보 자체는 정장되지 않음).<br>
+            <br>
+            3. 개인정보의 수집 이용 목적<br>
+            • 아이디, 비밀번호, 이메일, 닉네임 : 회원 가입시에 사용자확인, 중복가입 방지, 부정 이용 방지를 위한 목적으로 사용합니다.<br>
+            • 이용자의 IP 주소, 접속 기록 등: 불량회원의 부정 이용방지와 비인가 사용방지, 통계학적 분석에 사용합니다.<br>
         </div>
-        <input type="checkbox" name="agree" style="height: 15px">
-        <label><a>개인정보처리방침</a>에 동의 합니다.</label>
+        <form class="clauseCheck">
+            <input type="checkbox" name="agree" style="height: 15px; vertical-align: -3px;">
+            <label><a>개인정보처리방침</a>에 동의 합니다.</label>
+        </form>
     </form>
     <a>
     <img src="img/registration.jpg" style="margin-top: 30px; margin-bottom: 70px; align-self: center;" >
